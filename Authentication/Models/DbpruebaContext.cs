@@ -31,7 +31,7 @@ public partial class DbpruebaContext : DbContext
             entity.ToTable("HistorialRefreshToken");
 
             entity.Property(e => e.EsActivo).HasComputedColumnSql("(case when [FechaExpiracion]<getdate() then CONVERT([bit],(0)) else CONVERT([bit],(1)) end)", false);
-            entity.Property(e => e.FechaCreación).HasColumnType("datetime");
+            entity.Property(e => e.FechaCreacion).HasColumnType("datetime");
             entity.Property(e => e.FechaExpiracion).HasColumnType("datetime");
             entity.Property(e => e.RefreshToken)
                 .HasMaxLength(200)
