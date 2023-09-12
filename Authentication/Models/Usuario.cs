@@ -11,6 +11,6 @@ public partial class Usuario
 
     public string Clave { get; set; }
 
-    /*public virtual ICollection<HistorialRefreshToken> HistorialRefreshTokens { get; } = new List<HistorialRefreshToken>();
-     * */
+    public virtual ICollection<HistorialRefreshToken> HistorialRefreshTokens { get; } = new List<HistorialRefreshToken>();
+     
 }
